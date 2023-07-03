@@ -1,0 +1,149 @@
+:root {
+    /* Create variables to easily toggle light/dark mode */
+    --dark: #292b35;
+    --light: #e8e8e8;
+}
+
+body {
+    line-height: 1.6;
+    /* font-family:'Courier New', Courier, monospace; */
+    font-size: 16px;
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    font-size: 200%;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 175%;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 150%;
+    font-weight: 500;
+}
+
+/* Remove any link styling */
+a {
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a:visited {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.flex-container {
+    display: flex;
+}
+
+.grid-container {
+    display: grid;
+}
+
+/* Button styling */
+button {
+    background-color: var(--light);
+    border: solid 2px var(--dark);
+    border-radius: 2px;
+}
+
+/* Navigation Styling */
+
+/* Introduction Styling */
+.introduction {
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    margin: 50px auto;
+    max-width: 75%;
+    row-gap: 25px;
+}
+
+.intro-photo img {
+    /* Headshot cirlce */
+    border-radius: 50%;
+    width: 80%;
+    /* Center img within div */
+    display: block;
+    margin: 0 auto;
+}
+
+.hometown, .school {
+    /* Bring icons and text side-by-side */
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    /* Center icons and text */
+    align-items: center;
+    /* Separate two icons */
+    margin-bottom: 10px;
+}
+
+.school {
+    /* Separate school from "Learn More" button */
+    margin-bottom: 25px;
+}
+
+
+/* Learn More button */
+.learn-more {
+    padding: 8px 10px;
+}
+
+/* Invert colors when button is hovered over or tabbed onto */
+.learn-more:hover, .learn-more:focus {
+    background-color: var(--dark);
+}
+
+.learn-more:hover a, .learn-more:focus a {
+    color: var(--light);
+}
+
+/* Education Styling */
+
+/* Projects Styling */
+
+/* Work Experience Styling */
+
+/* Extracurriculars Styling */
+
+/* Tablet View */
+@media screen and (min-width: 640px) {
+    /* Navigation Styling */
+
+    /* Introduction Styling */
+
+    /* Education Styling */
+
+    /* Projects Styling */
+
+    /* Work Experience Styling */
+
+    /* Extracurriculars Styling */
+} /* Tablet View >= 640px */
+
+/* Desktop View */
+@media screen and (min-width: 1024px) {
+    /* Navigation Styling */
+
+    /* Introduction Styling */
+
+    /* Education Styling */
+
+    /* Projects Styling */
+
+    /* Work Experience Styling */
+
+    /* Extracurriculars Styling */
+} /* Desktop View >= 1024px */
