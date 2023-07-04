@@ -121,6 +121,26 @@ button.skip-content:focus, button.skip-content a:focus {
 .education {
     grid-template-columns: 1fr;
     margin: 25px auto;
+    row-gap: 25px;
+}
+
+#education h2 {
+    margin-left: 50px;
+}
+
+.university, .languages, .courses {
+    margin: 0 auto;
+}
+
+.graduation {
+    gap: 5px;
+    /* Align icon and grad year */
+    align-items: center;
+}
+
+.languages-list {
+    list-style: circle;
+    padding-left: 25px;
 }
 
 /* Awards styling within education */
@@ -153,6 +173,30 @@ button.skip-content:focus, button.skip-content a:focus {
     max-width: 60%;
     margin: 0 auto;
 }
+
+/* Relevant Coursework */
+.courses {
+    padding: 0 50px;
+}
+.courses h3, .course-item {
+    margin-bottom: 10px;
+}
+
+.course-item {
+    padding-bottom: 5px;
+    border-bottom: solid 1px var(--dark);
+}
+
+/* .course-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--dark);
+    width: 100%;
+} */
 
 /* Projects Styling */
 
