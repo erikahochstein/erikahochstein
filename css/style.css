@@ -118,6 +118,41 @@ button.skip-content:focus, button.skip-content a:focus {
 }
 
 /* Education Styling */
+.education {
+    grid-template-columns: 1fr;
+    margin: 25px auto;
+}
+
+/* Awards styling within education */
+.awards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    /* Keeps two award cards centered */
+    margin: 50px auto;
+}
+
+/* Each award on a colored 'card' */
+.awards div {
+    background-color: var(--dark);
+    color: var(--light);
+    border-radius: 20px;
+}
+
+.awards i {
+    /* Increase size of icon */
+    font-size: 500%;
+    padding: 15px;
+}
+
+.award-one, .award-two {
+    padding: 15px;
+    /* Keep two cards same width */
+    flex-grow: 1;
+    max-width: 60%;
+    margin: 0 auto;
+}
 
 /* Projects Styling */
 
