@@ -187,18 +187,64 @@ button.skip-content:focus, button.skip-content a:focus {
     border-bottom: solid 1px var(--dark);
 }
 
-/* .course-item::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: var(--dark);
-    width: 100%;
-} */
-
 /* Projects Styling */
+#projects {
+    /* Inverted color scheme */
+    background-color: var(--dark);
+    padding: 50px 0;
+}
+
+#projects h2 {
+    color: var(--light);
+    padding-left: 50px;
+}
+
+.projects {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin: 50px auto;
+    max-width: 80%;
+}
+
+.proj-info {
+    background: var(--light);
+    flex-direction: row;
+    /* Icon above text */
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80%;
+    margin: 0 auto;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.proj-icon i {
+    font-size: 500%;
+    padding: 50px 50px 25px 50px;
+}
+
+.proj-details {
+    padding: 25px;
+}
+
+.proj-role {
+    font-style: italic;
+    border-bottom: solid 1px var(--dark);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.proj-skills {
+    font-weight: 600;
+    padding-top: 15px;
+}
+
+.skills-list {
+    list-style: circle;
+    padding-left: 25px;
+}
 
 /* Work Experience Styling */
 
