@@ -1,1 +1,2 @@
 # erikahochstein
+Hi! My name is Erika Hochstein. I am a rising junior at the University of Michigan studying computer science. I have experience with front-end web development, and I have an interest in learning more about the development and maintenance of complex software systems.
