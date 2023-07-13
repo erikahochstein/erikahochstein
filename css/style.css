@@ -31,6 +31,10 @@ h3 {
     font-weight: 500;
 }
 
+strong {
+    font-weight: bold;
+}
+
 /* Remove any link styling */
 a {
     color: var(--dark);
@@ -41,6 +45,11 @@ a {
 a:visited {
     text-decoration: none;
     color: var(--dark);
+}
+
+/* Keep link underline when hovered */
+a:hover, a:focus {
+    text-decoration: underline  ;
 }
 
 .flex-container {
@@ -117,10 +126,27 @@ button.skip-content:focus, button.skip-content a:focus {
     margin-bottom: 25px;
 }
 
+/* Section Break between Introduction and Education */
+.reveal-break {
+    height: 2px;
+    background-color: var(--dark);
+    width: 50%;
+    margin: 150px auto 150px auto;
+    transform: scaleX(0);
+    opacity: 0;
+    transition: transform 0.3s ease;
+}
+
+.reveal-break.active {
+    transform: scaleX(1);
+    opacity: 1;
+}
+
 /* Education Styling */
 .education {
+    /* Grid container holding four different sections of education segment */
     grid-template-columns: 1fr;
-    margin: 25px auto;
+    margin: 10px auto 25px auto;
     row-gap: 25px;
 }
 
@@ -128,14 +154,12 @@ button.skip-content:focus, button.skip-content a:focus {
     margin-left: 50px;
 }
 
-.university, .languages, .courses {
-    margin: 0 auto;
+.university, .languages {
+    padding: 0 50px;
 }
 
-.graduation {
-    gap: 5px;
-    /* Align icon and grad year */
-    align-items: center;
+.courses {
+    margin: 0 auto;
 }
 
 .languages-list {
@@ -247,22 +271,115 @@ button.skip-content:focus, button.skip-content a:focus {
 }
 
 /* Work Experience Styling */
+#work {
+    margin: 50px 0;
+}
+
+#work h2 {
+    padding-left: 50px;
+}
+
+.jobs, .activities {
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+    padding: 25px 50px 0 50px;
+    margin: 0 auto;
+    max-width: 75%;
+}
+
+.job {
+    background-color: #BFD1E5;
+    padding: 25px;
+    border: 2px solid var(--dark);
+}
+
+ul.responsibilities {
+    padding-top: 15px;
+}
 
 /* Extracurriculars Styling */
+#activities {
+    margin: 50px 0;
+}
+
+.org {
+    padding: 25px;
+    border: 2px solid var(--dark);
+}
+
+/* Footer Styling */
+footer, footer a, footer i {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+footer a:visited {
+    color: var(--light);
+}
+
+footer h2, footer h3 {
+    text-align: center;
+    padding: 10px;
+}
+
+.socials-list {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+}
+
+.social-item {
+    padding: 5px 10px;
+}
 
 /* Tablet View */
 @media screen and (min-width: 640px) {
     /* Navigation Styling */
+
+    /* Center Section Headings */
+    #education h2, #projects h2, #work h2 {
+        text-align: center;
+        padding-left: 0;
+    }
 
     /* Introduction Styling */
 
     /* Education Styling */
 
     /* Projects Styling */
+    .projects {
+        gap: 50px;
+    }
+    .proj-info {
+        margin: 0;
+    }
+
+    .proj-info:nth-child(odd) {
+        justify-self: start;
+    }
+
+    .proj-info:nth-child(even) {
+        justify-self: end;
+    }
 
     /* Work Experience Styling */
+    .jobs {
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 25px;
+    }
 
     /* Extracurriculars Styling */
+    .activities {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+    }
+
+    .activities h2 {
+        align-self: center;
+        padding: 25px;
+        text-align: center;
+    }
 } /* Tablet View >= 640px */
 
 /* Desktop View */
