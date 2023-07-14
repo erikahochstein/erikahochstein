@@ -2,6 +2,7 @@
     /* Create variables to easily toggle light/dark mode */
     --dark: #292b35;
     --light: #e8e8e8;
+    --accent: #BFD1E5;
 }
 
 body {
@@ -90,6 +91,87 @@ button.skip-content:focus, button.skip-content a:focus {
 }
 
 /* Navigation Styling */
+/* Toggle Button */
+a.toggle-nav {
+    color: var(--light);
+}
+
+/* Menu */
+.menu {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    display: inline-block;
+}
+
+.menu ul.active {
+    display: none;
+}
+
+.menu-list {
+    position: absolute;
+    top: 120%;
+    left: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+    border-radius: 3px;
+    background-color: var(--dark);
+}
+
+/* Small triangle */
+.menu-list:after {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0%;
+    left: 25px;
+    content: '';
+    transform: translate(0%, -100%);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid var(--dark);
+}
+
+.menu-item {
+    margin: 5px 0 5px 0;
+    display: block;
+}
+
+.menu-item a {
+    color: var(--light);
+}
+
+.menu a {
+    display: block;
+}
+
+.menu a {
+    text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+    color: var(--light);
+    transition: color linear 0.15s;
+}    
+
+.menu a:hover, .menu a:focus {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+a.toggle-nav {
+    padding: 20px;
+    display: inline-block;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+    border-radius: 1px;
+    background: var(--dark);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+    color: var(--light);
+    transition: color linear 0.15s;
+}
+
+.toggle-nav:hover, .toggle-nav:focus,
+.toggle-nav.active {
+    text-decoration: none;
+    color: var(--accent); 
+}
 
 /* Introduction Styling */
 .introduction {
@@ -288,7 +370,7 @@ button.skip-content:focus, button.skip-content a:focus {
 }
 
 .job {
-    background-color: #BFD1E5;
+    background-color: var(--accent);
     padding: 25px;
     border: 2px solid var(--dark);
 }
@@ -336,6 +418,43 @@ footer h2, footer h3 {
 /* Tablet View */
 @media screen and (min-width: 640px) {
     /* Navigation Styling */
+    .menu ul.active {
+        display: block;
+    }
+
+    a.toggle-nav {
+        /* Hide hamburger toggle button */
+        display: none;
+    }
+
+    .menu {
+        width: 100%;
+        /* Top nav bar scroll with page */
+        position: fixed;
+        top: 0;
+        left: 0;
+        box-shadow: 0px 1px 1px rgba(0,0,0,0.15);
+        border-radius: 3px;
+        background-color: var(--dark);
+    }
+
+    .menu-list {
+        /* Horizontal row of nav links */
+        position: unset;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 10px 10px 25px;
+        list-style: none;
+    }
+
+    .menu-item {
+        margin: 0 25px 0 0;
+    }
+
+    .menu-list:last-child {
+        margin-right: 0;
+    }
 
     /* Center Section Headings */
     #education h2, #projects h2, #work h2 {
