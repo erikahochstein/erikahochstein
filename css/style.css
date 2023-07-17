@@ -181,7 +181,7 @@ a.toggle-nav {
     flex-direction: row;
     flex-wrap: wrap-reverse;
     justify-content: center;
-    margin: 50px auto;
+    margin: 100px auto;
     max-width: 75%;
     row-gap: 25px;
 }
@@ -195,10 +195,15 @@ a.toggle-nav {
     margin: 0 auto;
 }
 
+.intro-text h1, .intro-text p {
+    text-align: center;
+}
+
 .hometown, .school {
     /* Bring icons and text side-by-side */
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     column-gap: 5px;
     /* Center icons and text */
     align-items: center;
@@ -209,6 +214,14 @@ a.toggle-nav {
 .school {
     /* Separate school from "Learn More" button */
     margin-bottom: 25px;
+}
+
+a.learn-more {
+    transition: color linear 0.15s;
+    text-align: center;
+    width: 25%;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Section Break between Introduction and Education */
