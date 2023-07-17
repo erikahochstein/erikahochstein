@@ -219,25 +219,20 @@ a.toggle-nav {
 a.learn-more {
     transition: color linear 0.15s;
     text-align: center;
-    width: 25%;
+    width: 40%;
     display: block;
     margin: 0 auto;
 }
 
 /* Section Break between Introduction and Education */
-.reveal-break {
-    height: 2px;
-    background-color: var(--dark);
-    width: 50%;
-    margin: 150px auto 150px auto;
-    transform: scaleX(0);
-    opacity: 0;
-    transition: transform 0.3s ease;
+.break {
+    font-size: 50%;
+    text-align: center;
+    margin: 0 auto;
 }
 
-.reveal-break.active {
-    transform: scaleX(1);
-    opacity: 1;
+.break i {
+    color: var(--dark);
 }
 
 /* Education Styling */
@@ -249,7 +244,7 @@ a.learn-more {
 }
 
 #education h2 {
-    margin-left: 50px;
+    margin: 100px 10px 0 50px;
 }
 
 .university, .languages {
