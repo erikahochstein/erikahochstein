@@ -94,17 +94,19 @@ button.skip-content:focus, button.skip-content a:focus {
 /* Toggle Button */
 a.toggle-nav {
     color: var(--light);
+    font-size: 125%;
 }
 
 /* Menu */
 .menu {
     position: relative;
-    top: 10px;
-    left: 10px;
+    top: 25px;
+    left: 25px;
     display: inline-block;
 }
 
 .menu ul.active {
+    /* Navigation links initially hidden for mobile */
     display: none;
 }
 
@@ -157,10 +159,11 @@ a.toggle-nav {
 }
 
 a.toggle-nav {
-    padding: 20px;
+    padding: 5px 10px;
     display: inline-block;
     box-shadow: 0 1px 1px rgba(0,0,0,0.15);
-    border-radius: 1px;
+    border: 2px solid white;
+    border-radius: 5px;
     background: var(--dark);
     text-shadow: 0 1px 0 rgba(0,0,0,0.5);
     color: var(--light);
@@ -169,7 +172,6 @@ a.toggle-nav {
 
 .toggle-nav:hover, .toggle-nav:focus,
 .toggle-nav.active {
-    text-decoration: none;
     color: var(--accent); 
 }
 
@@ -418,6 +420,7 @@ footer h2, footer h3 {
 /* Tablet View */
 @media screen and (min-width: 640px) {
     /* Navigation Styling */
+    /* Want to display our navigation links now in top nav bar */
     .menu ul.active {
         display: block;
     }
@@ -438,7 +441,7 @@ footer h2, footer h3 {
         background-color: var(--dark);
     }
 
-    .menu-list {
+    .menu ul.active {
         /* Horizontal row of nav links */
         position: unset;
         display: flex;
