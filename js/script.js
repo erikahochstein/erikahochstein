@@ -21,3 +21,11 @@ jQuery(document).ready(function() {
         e.preventDefault();
     });
 });
+
+// Hide navigation links when screen resizes to mobile
+$(window).on("resize", function() {
+    if ($(window).width() <= 640) {
+        console.log("its happening");
+        jQuery('.menu-list').addClass('active');
+    } // mobile viewport
+});

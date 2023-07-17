@@ -62,7 +62,7 @@ a:hover, a:focus {
 }
 
 /* Button styling */
-button {
+.btn {
     background-color: var(--light);
     border: solid 2px var(--dark);
     border-radius: 2px;
@@ -70,22 +70,23 @@ button {
 }
 
 /* Invert colors when button is hovered over or tabbed onto */
-button:hover, button:focus {
+.btn:hover, .btn:focus {
     background-color: var(--dark);
 }
 
-button:hover a, button:focus a {
+a.btn:hover, a.btn:focus {
     color: var(--light);
 }
 
 /* Skip to Main Content Button */
-button.skip-content {
+.btn.skip-content {
     /* Hide button until tabbed onto */
     position: absolute;
     top: -100px;
 }
 
-button.skip-content:focus, button.skip-content a:focus {
+a.btn.skip-content:focus {
+    z-index: 1; 
     top: 10px;
     left: 10px;
 }
@@ -441,7 +442,8 @@ footer h2, footer h3 {
         background-color: var(--dark);
     }
 
-    .menu ul.active {
+    /* Account for open and closed nav links in mobile */
+    .menu ul.active, .menu ul {
         /* Horizontal row of nav links */
         position: unset;
         display: flex;
