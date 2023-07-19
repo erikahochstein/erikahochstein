@@ -228,6 +228,29 @@ a.toggle-nav {
     margin-bottom: 10px;
 }
 
+.hometown p.icon::before {
+    font: var(--fa-font-solid);
+    content: '\f276';
+    position: relative;
+    right: 5px;
+}
+
+.school p.icon::before {
+    font: var(--fa-font-solid);
+    content: '\f19c';
+}
+
+p.icon::before {
+    /* Create space between icon and text */
+    position: relative;
+    right: 5px;
+}
+
+p.icon {
+    /* Bring back in line with text above */
+    padding-left: 5px;
+}
+
 .school {
     /* Separate school from "Learn More" button */
     margin-bottom: 25px;
@@ -236,7 +259,7 @@ a.toggle-nav {
 a.learn-more {
     transition: color linear 0.15s;
     text-align: center;
-    width: 40%;
+    width: 50%;
     display: block;
     margin: 0 auto;
 }
@@ -416,12 +439,19 @@ footer h2, footer h3 {
 
 .social-item {
     padding: 5px 10px;
-    font-weight: 400;
 }
 
 .social-item:not(:last-child) {
     /* Separate links with vertical lines */
     border-right: 1px solid var(--dark);
+}
+
+.social-item a {
+    font-weight: 400;
+}
+
+.social-item a:hover {
+    font-weight: 600;
 }
 
 footer h2 {
@@ -475,13 +505,31 @@ footer h3 {
         margin-right: 0;
     }
 
-    /* Center Section Headings */
-    #education h2, #projects h2, #work h2 {
-        text-align: center;
-        padding-left: 0;
+    /* Introduction Styling */
+    .introduction {
+        flex-wrap: nowrap;
+        margin: 200px auto;
+        column-gap: 25px;
     }
 
-    /* Introduction Styling */
+    .intro-text, .intro-photo {
+        /* Each take half of container */
+        max-width: 50%;
+        padding: 10px;
+    }
+
+    .intro-photo img {
+        width: 100%;
+    }
+
+    .intro-text {
+        text-align: left;
+        margin: auto 0;
+    }
+
+    .hometown, .school {
+        justify-content: left;
+    }
 
     /* Education Styling */
 
@@ -525,10 +573,25 @@ footer h3 {
     /* Navigation Styling */
 
     /* Introduction Styling */
+    .introduction {
+        column-gap: 50px;
+    }
 
     /* Education Styling */
 
     /* Projects Styling */
+    .projects {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .proj-icon {
+        align-self: center;
+        justify-self: center;
+    }
+
+    .proj-details {
+        align-self: start;
+    }
 
     /* Work Experience Styling */
 
