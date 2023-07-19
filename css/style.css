@@ -185,6 +185,7 @@ a.toggle-nav {
 
 .break i {
     color: var(--dark);
+    padding: 2.5px;
 }
 
 /* Creates space between each section */
@@ -199,7 +200,7 @@ a.toggle-nav {
     justify-content: center;
     margin: 100px auto;
     max-width: 75%;
-    row-gap: 25px;
+    row-gap: 50px;
 }
 
 .intro-photo img {
@@ -211,7 +212,7 @@ a.toggle-nav {
     margin: 0 auto;
 }
 
-.intro-text h1, .intro-text p {
+.intro-text {
     text-align: center;
 }
 
@@ -318,13 +319,13 @@ a.learn-more {
 
 #projects h2 {
     color: var(--light);
-    padding-left: 50px;
+    padding: 0 10px 25px 50px;
 }
 
 .projects {
     grid-template-columns: 1fr;
     gap: 25px;
-    margin: 50px auto;
+    margin: 15px auto;
     max-width: 80%;
 }
 
@@ -334,7 +335,6 @@ a.learn-more {
     /* Icon above text */
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 80%;
     margin: 0 auto;
     border-top-left-radius: 75px;
     border-top-right-radius: 75px;
@@ -408,14 +408,28 @@ footer h2, footer h3 {
 }
 
 .socials-list {
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    justify-content: center;
     padding: 10px;
 }
 
 .social-item {
     padding: 5px 10px;
+    font-weight: 400;
+}
+
+.social-item:not(:last-child) {
+    /* Separate links with vertical lines */
+    border-right: 1px solid var(--dark);
+}
+
+footer h2 {
+    font-size: 125%;
+}
+
+footer h3 {
+    font-size: 100%;
 }
 
 /* Tablet View */
