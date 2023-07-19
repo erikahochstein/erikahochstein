@@ -176,6 +176,22 @@ a.toggle-nav {
     color: var(--accent); 
 }
 
+/* Section Breaks Styling */
+.break {
+    font-size: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.break i {
+    color: var(--dark);
+}
+
+/* Creates space between each section */
+#education, #work, #projects, #activities {
+    margin: 100px 0;
+}
+
 /* Introduction Styling */
 .introduction {
     flex-direction: row;
@@ -224,17 +240,6 @@ a.learn-more {
     margin: 0 auto;
 }
 
-/* Section Break between Introduction and Education */
-.break {
-    font-size: 50%;
-    text-align: center;
-    margin: 0 auto;
-}
-
-.break i {
-    color: var(--dark);
-}
-
 /* Education Styling */
 .education {
     /* Grid container holding four different sections of education segment */
@@ -244,7 +249,7 @@ a.learn-more {
 }
 
 #education h2 {
-    margin: 100px 10px 0 50px;
+    margin: 0 10px 0 50px;
 }
 
 .university, .languages {
@@ -364,10 +369,6 @@ a.learn-more {
 }
 
 /* Work Experience Styling */
-#work {
-    margin: 50px 0;
-}
-
 #work h2 {
     padding-left: 50px;
 }
@@ -401,15 +402,6 @@ ul.responsibilities {
 }
 
 /* Footer Styling */
-footer, footer a, footer i {
-    background-color: var(--dark);
-    color: var(--light);
-}
-
-footer a:visited {
-    color: var(--light);
-}
-
 footer h2, footer h3 {
     text-align: center;
     padding: 10px;
