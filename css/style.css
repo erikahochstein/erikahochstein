@@ -189,8 +189,14 @@ a.toggle-nav {
 }
 
 /* Creates space between each section */
+.break {
+    padding: 100px 0 50px 0;
+}
+
+/* Add padding to top of section <h2> so that <h2> is visible
+   when navigating to the section since we have a fixed navigation bar */
 #education, #work, #projects, #activities {
-    margin: 100px 0;
+    padding-top: 50px;
 }
 
 /* Introduction Styling */
@@ -198,7 +204,8 @@ a.toggle-nav {
     flex-direction: row;
     flex-wrap: wrap-reverse;
     justify-content: center;
-    margin: 100px auto;
+    padding: 100px 0;
+    margin: 0 auto;
     max-width: 75%;
     row-gap: 50px;
 }
@@ -276,7 +283,7 @@ a.learn-more {
     margin: 0 10px 0 50px;
 }
 
-.university, .languages {
+.university, .languages, .tech-skills {
     padding: 0 50px;
 }
 
@@ -284,7 +291,7 @@ a.learn-more {
     margin: 0 auto;
 }
 
-.languages-list {
+.languages-list, .tech-skills-list {
     list-style: circle;
     padding-left: 25px;
 }
@@ -337,7 +344,9 @@ a.learn-more {
 #projects {
     /* Inverted color scheme */
     background-color: var(--dark);
-    padding: 50px 0;
+    /* Need margin to make 100px between top of section and break circles */
+    margin-top: 50px;
+    padding-bottom: 50px;
 }
 
 #projects h2 {
@@ -399,7 +408,7 @@ a.learn-more {
 .jobs, .activities {
     grid-template-columns: 1fr;
     row-gap: 25px;
-    padding: 25px 50px 0 50px;
+    padding: 15px 50px 0 50px;
     margin: 0 auto;
     max-width: 75%;
 }
@@ -415,16 +424,15 @@ ul.responsibilities {
 }
 
 /* Extracurriculars Styling */
-#activities {
-    margin: 50px 0;
-}
-
 .org {
     padding: 25px;
     border: 2px solid var(--dark);
 }
 
 /* Footer Styling */
+footer {
+    margin-top: 100px;
+}
 footer h2, footer h3 {
     text-align: center;
     padding: 10px;
@@ -464,6 +472,13 @@ footer h3 {
 
 /* Tablet View */
 @media screen and (min-width: 640px) {
+    /* Center section headings (except extracurricular) */
+    #education h2, #work h2, #projects h2 {
+        margin: 0;
+        padding: 0 0 25px 0;
+        text-align: center;
+    }
+
     /* Navigation Styling */
     /* Want to display our navigation links now in top nav bar */
     .menu ul.active {
@@ -508,7 +523,8 @@ footer h3 {
     /* Introduction Styling */
     .introduction {
         flex-wrap: nowrap;
-        margin: 200px auto;
+        /* Increase top margin because now have navigation bar */
+        padding-top: 175px;
         column-gap: 25px;
     }
 
@@ -532,6 +548,20 @@ footer h3 {
     }
 
     /* Education Styling */
+    .education {
+        grid-template-columns: 1fr 1fr;
+        max-width: 75%;
+    }
+
+    .university, .courses,
+    .awards {
+        grid-column: 1 / -1;
+    }
+
+    .award-one, .award-two {
+        max-width: 50%;
+    }
+
 
     /* Projects Styling */
     .projects {
@@ -570,14 +600,24 @@ footer h3 {
 
 /* Desktop View */
 @media screen and (min-width: 1024px) {
-    /* Navigation Styling */
-
     /* Introduction Styling */
     .introduction {
         column-gap: 50px;
     }
 
     /* Education Styling */
+
+    .languages {
+        justify-self: self-end;
+    }
+
+    .tech-skills {
+        justify-self: self-start;
+    }
+
+    .languages, .tech-skills {
+        padding-top: 25px;
+    }
 
     /* Projects Styling */
     .projects {
