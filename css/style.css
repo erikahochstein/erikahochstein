@@ -403,6 +403,7 @@ a.learn-more {
 /* Work Experience Styling */
 #work h2 {
     padding-left: 50px;
+    padding-bottom: 25px;
 }
 
 .jobs, .activities {
@@ -419,8 +420,14 @@ a.learn-more {
     border: 2px solid var(--dark);
 }
 
+h4.position {
+    font-style: italic;
+}
+
 ul.responsibilities {
     padding-top: 15px;
+    padding-left: 15px;
+    list-style: circle;
 }
 
 /* Extracurriculars Styling */
