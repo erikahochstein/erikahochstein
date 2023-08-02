@@ -420,8 +420,9 @@ a.learn-more {
     border: 2px solid var(--dark);
 }
 
-h4.position {
+h4.position, h4.proj-role {
     font-style: italic;
+    font-size: 115%;
 }
 
 ul.responsibilities {
@@ -434,6 +435,11 @@ ul.responsibilities {
 .org {
     padding: 25px;
     border: 2px solid var(--dark);
+}
+
+h4.org-role {
+    font-size: 115%;
+    font-style: italic;
 }
 
 /* Footer Styling */
